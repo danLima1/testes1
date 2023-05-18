@@ -20,9 +20,9 @@ const showActiveTabBody = () => {
 const hideAllTabBody = () => allTabsBody.forEach(singleTabBody => singleTabBody.classList.remove('show-tab'));
 const hideAllTabHead = () => allTabsHead.forEach(singleTabHead => singleTabHead.classList.remove('active-tab'));
 
-// even listeners
+
 window.addEventListener('DOMContentLoaded', () => init());
-// button event listeners
+
 allTabsHead.forEach(singleTabHead => {
     singleTabHead.addEventListener('click', () => {
         hideAllTabHead();
@@ -38,7 +38,7 @@ const getInputValue = (event) => {
     fetchAllSuperHero(searchText);
 }
 
-// search form submission
+
 searchForm.addEventListener('submit', getInputValue);
 
 // api key => 727054372039115
