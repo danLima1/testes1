@@ -20,9 +20,9 @@ const showActiveTabBody = () => {
 const hideAllTabBody = () => allTabsBody.forEach(singleTabBody => singleTabBody.classList.remove('show-tab'));
 const hideAllTabHead = () => allTabsHead.forEach(singleTabHead => singleTabHead.classList.remove('active-tab'));
 
-
+// even listeners
 window.addEventListener('DOMContentLoaded', () => init());
-
+// button event listeners
 allTabsHead.forEach(singleTabHead => {
     singleTabHead.addEventListener('click', () => {
         hideAllTabHead();
@@ -38,7 +38,7 @@ const getInputValue = (event) => {
     fetchAllSuperHero(searchText);
 }
 
-
+// search form submission
 searchForm.addEventListener('submit', getInputValue);
 
 // api key => 727054372039115
@@ -57,7 +57,7 @@ const fetchAllSuperHero = async(searchText) => {
 }
 
 const showSearchList = (data) => {
-    searchList.innerHTML
+    searchList.innerHTML = "";
     data.forEach(dataItem => {
         const divElem = document.createElement('div');
         divElem.classList.add('search-list-item');
@@ -97,42 +97,42 @@ const showSuperheroDetails = (data) => {
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>inteligencia</span>
+            <span>intelligence</span>
         </div>
         <span>${data[0].powerstats.intelligence}</span>
     </li>
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>força</span>
+            <span>strength</span>
         </div>
         <span>${data[0].powerstats.strength}</span>
     </li>
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>Velocidade</span>
+            <span>speed</span>
         </div>
         <span>${data[0].powerstats.speed}</span>
     </li>
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>durabilidade</span>
+            <span>durability</span>
         </div>
         <span>${data[0].powerstats.durability}</span>
     </li>
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>poder</span>
+            <span>power</span>
         </div>
         <span>${data[0].powerstats.power}</span>
     </li>
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>combate</span>
+            <span>combat</span>
         </div>
         <span>${data[0].powerstats.combat}</span>
     </li>
@@ -140,27 +140,27 @@ const showSuperheroDetails = (data) => {
 
     document.querySelector('.biography').innerHTML = `
     <li>
-        <span>Nome completo</span>
+        <span>full name</span>
         <span>${data[0].biography['full-name']}</span>
     </li>
     <li>
-        <span>alter-egos</span>
+        <span>alert-egos</span>
         <span>${data[0].biography['alter-egos']}</span>
     </li>
     <li>
-        <span>Aliados</span>
+        <span>aliases</span>
         <span>${data[0].biography['aliases']}</span>
     </li>
     <li>
-        <span>Lugar de Nascimento</span>
+        <span>place-of-birth</span>
         <span>${data[0].biography['place-of-birth']}</span>
     </li>
     <li>
-        <span>Primeira aparicição</span>
+        <span>first-apperance</span>
         <span>${data[0].biography['first-appearance']}</span>
     </li>
     <li>
-        <span>Edição</span>
+        <span>publisher</span>
         <span>${data[0].biography['publisher']}</span>
     </li>
     `;
@@ -168,37 +168,37 @@ const showSuperheroDetails = (data) => {
     document.querySelector('.appearance').innerHTML = `
     <li>
         <span>
-            <i class = "fas fa-star"></i> Genero
+            <i class = "fas fa-star"></i> gender
         </span>
         <span>${data[0].appearance['gender']}</span>
     </li>
     <li>
         <span>
-            <i class = "fas fa-star"></i> Raça
+            <i class = "fas fa-star"></i> race
         </span>
         <span>${data[0].appearance['race']}</span>
     </li>
     <li>
         <span>
-            <i class = "fas fa-star"></i> Altura
+            <i class = "fas fa-star"></i> height
         </span>
         <span>${data[0].appearance['height'][0]}</span>
     </li>
     <li>
         <span>
-            <i class = "fas fa-star"></i> Peso
+            <i class = "fas fa-star"></i> weight
         </span>
         <span>${data[0].appearance['weight'][0]}</span>
     </li>
     <li>
         <span>
-            <i class = "fas fa-star"></i> Cor dos olhos
+            <i class = "fas fa-star"></i> eye-color
         </span>
         <span>${data[0].appearance['eye-color']}</span>
     </li>
     <li>
         <span>
-            <i class = "fas fa-star"></i> Cor do cabelo
+            <i class = "fas fa-star"></i> hair-color
         </span>
         <span>${data[0].appearance['hair-color']}</span>
     </li>
@@ -206,12 +206,12 @@ const showSuperheroDetails = (data) => {
 
     document.querySelector('.connections').innerHTML = `
     <li>
-        <span>Afiliações</span>
+        <span>group--affiliation</span>
         <span>${data[0].connections['group-affiliation']}</span>
     </li>
     <li>
-        <span>Parentes</span>
-        <span>${data[0].connections['Parentes']}</span>
+        <span>relatives</span>
+        <span>${data[0].connections['relatives']}</span>
     </li>
     `;
 }
