@@ -97,42 +97,42 @@ const showSuperheroDetails = (data) => {
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>intelligence</span>
+            <span>inteligencia</span>
         </div>
         <span>${data[0].powerstats.intelligence}</span>
     </li>
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>strength</span>
+            <span>Força</span>
         </div>
         <span>${data[0].powerstats.strength}</span>
     </li>
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>speed</span>
+            <span>velocidade</span>
         </div>
         <span>${data[0].powerstats.speed}</span>
     </li>
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>durability</span>
+            <span>Durabilidade</span>
         </div>
         <span>${data[0].powerstats.durability}</span>
     </li>
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>power</span>
+            <span>Poder</span>
         </div>
         <span>${data[0].powerstats.power}</span>
     </li>
     <li>
         <div>
             <i class = "fa-solid fa-shield-halved"></i>
-            <span>combat</span>
+            <span>Combate</span>
         </div>
         <span>${data[0].powerstats.combat}</span>
     </li>
@@ -140,27 +140,27 @@ const showSuperheroDetails = (data) => {
 
     document.querySelector('.biography').innerHTML = `
     <li>
-        <span>full name</span>
+        <span>Nome completo</span>
         <span>${data[0].biography['full-name']}</span>
     </li>
     <li>
-        <span>alert-egos</span>
+        <span>alter-egos</span>
         <span>${data[0].biography['alter-egos']}</span>
     </li>
     <li>
-        <span>aliases</span>
+        <span>Aliados</span>
         <span>${data[0].biography['aliases']}</span>
     </li>
     <li>
-        <span>place-of-birth</span>
+        <span>Lugar de nascimento</span>
         <span>${data[0].biography['place-of-birth']}</span>
     </li>
     <li>
-        <span>first-apperance</span>
+        <span>Primeira aparição</span>
         <span>${data[0].biography['first-appearance']}</span>
     </li>
     <li>
-        <span>publisher</span>
+        <span>Editora</span>
         <span>${data[0].biography['publisher']}</span>
     </li>
     `;
@@ -168,37 +168,37 @@ const showSuperheroDetails = (data) => {
     document.querySelector('.appearance').innerHTML = `
     <li>
         <span>
-            <i class = "fas fa-star"></i> gender
+            <i class = "fas fa-star"></i> Genero
         </span>
         <span>${data[0].appearance['gender']}</span>
     </li>
     <li>
         <span>
-            <i class = "fas fa-star"></i> race
+            <i class = "fas fa-star"></i> Velocidade
         </span>
         <span>${data[0].appearance['race']}</span>
     </li>
     <li>
         <span>
-            <i class = "fas fa-star"></i> height
+            <i class = "fas fa-star"></i> Altura
         </span>
         <span>${data[0].appearance['height'][0]}</span>
     </li>
     <li>
         <span>
-            <i class = "fas fa-star"></i> weight
+            <i class = "fas fa-star"></i> Peso
         </span>
         <span>${data[0].appearance['weight'][0]}</span>
     </li>
     <li>
         <span>
-            <i class = "fas fa-star"></i> eye-color
+            <i class = "fas fa-star"></i> Cor dos olhos
         </span>
         <span>${data[0].appearance['eye-color']}</span>
     </li>
     <li>
         <span>
-            <i class = "fas fa-star"></i> hair-color
+            <i class = "fas fa-star"></i>Cor do cabelo
         </span>
         <span>${data[0].appearance['hair-color']}</span>
     </li>
@@ -206,11 +206,11 @@ const showSuperheroDetails = (data) => {
 
     document.querySelector('.connections').innerHTML = `
     <li>
-        <span>group--affiliation</span>
+        <span>Afiliações</span>
         <span>${data[0].connections['group-affiliation']}</span>
     </li>
     <li>
-        <span>relatives</span>
+        <span>Parentes</span>
         <span>${data[0].connections['relatives']}</span>
     </li>
     `;
