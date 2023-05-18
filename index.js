@@ -20,9 +20,9 @@ const showActiveTabBody = () => {
 const hideAllTabBody = () => allTabsBody.forEach(singleTabBody => singleTabBody.classList.remove('show-tab'));
 const hideAllTabHead = () => allTabsHead.forEach(singleTabHead => singleTabHead.classList.remove('active-tab'));
 
-// even listeners
+
 window.addEventListener('DOMContentLoaded', () => init());
-// button event listeners
+
 allTabsHead.forEach(singleTabHead => {
     singleTabHead.addEventListener('click', () => {
         hideAllTabHead();
@@ -38,17 +38,17 @@ const getInputValue = (event) => {
     fetchAllSuperHero(searchText);
 }
 
-// search form submission
+
 searchForm.addEventListener('submit', getInputValue);
 
-// api key => 727054372039115
+
 const fetchAllSuperHero = async(searchText) => {
     let url = `https://www.superheroapi.com/api.php/727054372039115/search/${searchText}`;
     try{
         const response = await fetch(url);
         allData = await response.json();
         if(allData.response === 'success'){
-            // console.log(allData);
+        
             showSearchList(allData.results);
         }
     } catch(error){
